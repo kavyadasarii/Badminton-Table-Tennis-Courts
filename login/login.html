@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Rally Point Badminton &amp; Table Tennis, Hyderabad</title>
+<meta name="description" content="Log in to Rally Point to book badminton courts and table tennis tables, manage your membership and see your bookings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="stylesheet" href="auth.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='14' fill='%230B6B45'/%3E%3Cg stroke='%23fff' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M27 39L43 15M29 42L50.7 22.7M30 45L52 32M43 15Q54 22 52 32'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='7.5' fill='%23FF6A1A'/%3E%3C/svg%3E">
+</head>
+<body class="auth-page">
+
+<div class="top-actions">
+  <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+  <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+    <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+<main class="auth-main">
+  <section class="auth-card" aria-labelledby="auth-title">
+
+    <a href="../home/index.html" class="brand" aria-label="Rally Point home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="var(--logo-bg)"/>
+          <g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none">
+            <path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/>
+          </g>
+          <circle cx="23" cy="43" r="7.5" fill="var(--logo-ball)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="logo-word">Rally<em>Point</em></span>
+        <span class="brand-sub">Badminton &amp; Table Tennis Courts</span>
+      </span>
+    </a>
+    <div class="auth-head">
+      <h1 id="auth-title">Welcome back</h1>
+    </div>
+    <form class="auth-form" id="auth-form" data-mode="login" data-next="../dashboard/dashboard.html" novalidate>
+      <div class="field">
+        <label for="email">Email address</label>
+        <div class="control">
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <span class="err">Please enter a valid email address.</span>
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="control has-eye">
+          <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button type="button" class="eye" aria-label="Show password" aria-pressed="false">
+            <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.1A9.7 9.7 0 0112 5c6.4 0 10 7 10 7a17 17 0 01-3.2 4.2M6.6 6.6A17 17 0 002 12s3.6 7 10 7c1.7 0 3.2-.4 4.5-1.1"/><path d="M9.9 9.9a3 3 0 004.2 4.2"/></svg>
+          </button>
+        </div>
+        <span class="err">Please enter your password.</span>
+      </div>
+
+      <div class="row-between">
+        <label class="check"><input type="checkbox" name="remember"> Remember me</label>
+        <a href="../contact/contact.html" class="link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-submit">
+        Log in
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+    <div class="divider">or continue with</div>
+    <div class="social">
+      <button type="button" class="social-btn" data-provider="google">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+        Google
+      </button>
+      <button type="button" class="social-btn" data-provider="apple">
+        <svg class="apple" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+        Apple
+      </button>
+    </div>
+
+    <p class="switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+  </section>
+</main>
+
+<script src="../home/script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

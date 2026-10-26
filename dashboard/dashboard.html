@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Player Dashboard — Rally Point Badminton &amp; Table Tennis, Hyderabad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='14' fill='%230B6B45'/%3E%3Cg stroke='%23fff' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M27 39L43 15M29 42L50.7 22.7M30 45L52 32M43 15Q54 22 52 32'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='7.5' fill='%23FF6A1A'/%3E%3C/svg%3E">
+</head>
+<body class="dash">
+<div class="app">
+
+  <aside class="side" id="side" aria-label="Dashboard navigation">
+    <a href="../home/index.html" class="brand" aria-label="Rally Point home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="14" fill="var(--logo-bg)"/><g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/></g><circle cx="23" cy="43" r="7.5" fill="var(--logo-ball)"/></svg>
+      </span>
+      <span class="brand-text"><span class="logo-word">Rally<em>Point</em></span><span class="brand-sub">Player Dashboard</span></span>
+    </a>
+    <nav class="snav" id="nav"></nav>
+    <div class="side-foot">
+      <a href="../courts/courts.html" class="btn btn-secondary btn-sm">Browse courts</a>
+      <a href="../login/login.html" class="logout" id="logout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H5v16h4M16 8l4 4-4 4M20 12H9"/></svg><span>Logout</span></a>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+
+  <div class="main">
+    <header class="top">
+      <button class="icon-btn menu-btn" id="side-toggle" aria-label="Open navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <div class="top-title"><h1>Player Dashboard</h1><p id="today"></p></div>
+      <div class="top-actions">
+        <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn bell" data-a="go" data-v="notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15zM10 20a2 2 0 004 0"/></svg><span class="dot" id="bell-n"></span></button>
+        <button class="me" data-a="go" data-v="profile" aria-label="My profile"><span class="av" id="av">K</span><span class="me-name" id="me-name">Kavya</span></button>
+      </div>
+    </header>
+    <main class="view" id="view" tabindex="-1"></main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="../home/script.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

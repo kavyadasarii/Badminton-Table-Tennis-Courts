@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Membership Plans — Rally Point Badminton &amp; Table Tennis, Hyderabad</title>
+<meta name="description" content="Compare Rally Point membership plans: Casual, Regular and Unlimited. Play more badminton and table tennis for less, with flexible billing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="stylesheet" href="membership.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='14' fill='%230B6B45'/%3E%3Cg stroke='%23fff' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M27 39L43 15M29 42L50.7 22.7M30 45L52 32M43 15Q54 22 52 32'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='7.5' fill='%23FF6A1A'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="../home/index.html" class="brand" aria-label="Rally Point home">
+        <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="var(--logo-bg)"/>
+          <g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none">
+            <path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/>
+          </g>
+          <circle cx="23" cy="43" r="7.5" fill="var(--logo-ball)"/>
+        </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Rally<em>Point</em></span>
+          <span class="brand-sub">Badminton &amp; Table Tennis Courts</span>
+        </span>
+      </a>
+
+    <nav class="primary" aria-label="Main">
+      <div class="nav-item">
+        <a href="../home/index.html">Home
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="../home/index.html">Home 1 – Classic</a>
+          <a href="../home2/home-2.html">Home 2 – Modern</a>
+        </div>
+      </div>
+      <a href="../about/about.html">About Us</a>
+      <a href="../courts/courts.html">Courts</a>
+      <a href="../membership/membership.html" class="active" aria-current="page">Membership Plans</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="../login/login.html" class="btn btn-primary btn-sm desktop-only"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c1.4-3.8 4.2-5.6 7-5.6s5.6 1.8 7 5.6"/></svg><span>Login</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel">
+    <details class="mobile-dropdown">
+      <summary>Home</summary>
+      <a href="../home/index.html">Home 1 – Classic</a>
+      <a href="../home2/home-2.html">Home 2 – Modern</a>
+    </details>
+    <a href="../about/about.html">About Us</a>
+    <a href="../courts/courts.html">Courts</a>
+    <a href="../membership/membership.html">Membership Plans</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <div class="mobile-actions">
+      <a href="../login/login.html" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c1.4-3.8 4.2-5.6 7-5.6s5.6 1.8 7 5.6"/></svg><span>Login</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="m-hero">
+    <div class="wrap m-hero-grid">
+      <div class="m-hero-copy">
+        <span class="kicker">Membership plans</span>
+        <h1>Play more.<br><em>Pay less.</em></h1>
+        <p class="lead">Pick a plan, book ahead and get lower rates on every hour you play. Pause or cancel whenever life gets busy.</p>
+        <div class="hero-actions">
+          <a href="#plans" class="btn btn-secondary">Compare plans</a>
+          <a href="../contact/contact.html" class="btn btn-outline">Talk to us</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>₹0</strong><span>Joining fee</span></li>
+          <li><strong>20%</strong><span>Yearly saving</span></li>
+          <li><strong>2</strong><span>Sports, one plan</span></li>
+        </ul>
+      </div>
+      <div class="card-stage">
+        <figure class="media m-hero-img" data-label="membership-hero.jpg · 4:5"><img src="images/membership-hero.jpg" alt="Members laughing together between games" onerror="this.remove()"></figure>
+        <div class="mcard front" aria-hidden="true">
+          <div class="mcard-top">
+            <svg viewBox="0 0 64 64" fill="none" class="mcard-mark"><rect width="64" height="64" rx="14" fill="#fff"/><g stroke="#0B6B45" stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/></g><circle cx="23" cy="43" r="7.5" fill="#FF6A1A"/></svg>
+            <span class="mcard-tier">Regular</span>
+          </div>
+          <div class="mcard-bottom">
+            <span class="mcard-no">RP · 0042 · 1187</span>
+            <strong>Your Name</strong>
+            <span class="mcard-since">Member since 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-sec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Why join</span>
+        <h2>Better value every time you play</h2>
+        <p>Lower rates, earlier booking and the flexibility to pause, all in one plan.</p>
+      </div>
+      <div class="why">
+        <article class="why-card"><figure class="media why-img" data-label="why-rates.jpg · 3:2"><img src="images/why-rates.jpg" alt="Scoreboard and shuttlecocks on a court" loading="lazy" onerror="this.remove()"></figure><div class="why-body"><div class="why-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.5 6 .8-4.4 4.2 1.1 6L12 16.6 6.7 19.5l1.1-6L3.4 9.3l6-.8z"/></svg></span><span class="why-num" aria-hidden="true">01</span></div><h3>Lower hourly rates</h3><p>Members pay less than walk-in prices, every single visit.</p></div></article>
+        <article class="why-card"><figure class="media why-img" data-label="why-booking.jpg · 3:2"><img src="images/why-booking.jpg" alt="Player checking the booking app courtside" loading="lazy" onerror="this.remove()"></figure><div class="why-body"><div class="why-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></span><span class="why-num" aria-hidden="true">02</span></div><h3>Book further ahead</h3><p>Reserve prime evening slots up to 14 days before anyone else.</p></div></article>
+        <article class="why-card"><figure class="media why-img" data-label="why-friend.jpg · 3:2"><img src="images/why-friend.jpg" alt="Two friends playing doubles" loading="lazy" onerror="this.remove()"></figure><div class="why-body"><div class="why-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c.6-3.5 3-5.4 6-5.4s5.4 1.9 6 5.4M16 14.6c2.6 0 4.4 1.6 5 4.4"/></svg></span><span class="why-num" aria-hidden="true">03</span></div><h3>Bring a friend</h3><p>Guest passes on Regular and Unlimited so you never play alone.</p></div></article>
+        <article class="why-card"><figure class="media why-img" data-label="why-pause.jpg · 3:2"><img src="images/why-pause.jpg" alt="Player resting with a water bottle" loading="lazy" onerror="this.remove()"></figure><div class="why-body"><div class="why-top"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></span><span class="why-num" aria-hidden="true">04</span></div><h3>Pause when needed</h3><p>Travelling or injured? Freeze your plan and pick up later.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="plans">
+    <div class="wrap">
+      <div class="plans-head">
+        <div class="section-head">
+          <span class="kicker">Choose a plan</span>
+          <h2>Simple, flexible pricing</h2>
+          <p>Pick the plan that fits how often you play. Pause or cancel anytime.</p>
+        </div>
+        <div class="period" role="group" aria-label="Billing period">
+          <button class="p-btn is-active" data-months="1" aria-pressed="true">Monthly</button>
+          <button class="p-btn" data-months="3" aria-pressed="false">3 months <em>Save 10%</em></button>
+          <button class="p-btn" data-months="12" aria-pressed="false">Yearly <em>Save 20%</em></button>
+        </div>
+      </div>
+      <div class="plan-grid">
+        <article class="plan">
+
+          <figure class="media plan-img" data-label="plan-casual.jpg · 16:9"><img src="images/plan-casual.jpg" alt="A casual weekend badminton game" loading="lazy" onerror="this.remove()"></figure>
+          <h3>Casual</h3>
+          <p class="plan-desc">For a weekly game</p>
+          <p class="price"><span class="amt" data-monthly="1500">₹1,500</span><small>/month</small></p>
+          <p class="bill" data-bill>Billed monthly</p>
+          <ul><li>4 hours of court time</li><li>Book 3 days ahead</li><li>Either sport</li><li>Member rates on extra hours</li></ul>
+          <a href="../login/login.html" class="btn btn-outline">Choose Casual</a>
+        </article>
+        <article class="plan featured">
+          <span class="badge">Most popular</span>
+          <figure class="media plan-img" data-label="plan-regular.jpg · 16:9"><img src="images/plan-regular.jpg" alt="Regulars rallying on the main courts" loading="lazy" onerror="this.remove()"></figure>
+          <h3>Regular</h3>
+          <p class="plan-desc">For players who show up often</p>
+          <p class="price"><span class="amt" data-monthly="3000">₹3,000</span><small>/month</small></p>
+          <p class="bill" data-bill>Billed monthly</p>
+          <ul><li>10 hours of court time</li><li>Book 7 days ahead</li><li>Both sports</li><li>Bring a guest free, twice a month</li><li>10% off coaching</li></ul>
+          <a href="../login/login.html" class="btn btn-secondary">Choose Regular</a>
+        </article>
+        <article class="plan">
+
+          <figure class="media plan-img" data-label="plan-unlimited.jpg · 16:9"><img src="images/plan-unlimited.jpg" alt="Players training hard in the evening" loading="lazy" onerror="this.remove()"></figure>
+          <h3>Unlimited</h3>
+          <p class="plan-desc">For the all-in regulars</p>
+          <p class="price"><span class="amt" data-monthly="5500">₹5,500</span><small>/month</small></p>
+          <p class="bill" data-bill>Billed monthly</p>
+          <ul><li>Unlimited off-peak play</li><li>Book 14 days ahead</li><li>Both sports</li><li>Free locker</li><li>20% off coaching</li><li>Priority peak booking</li></ul>
+          <a href="../login/login.html" class="btn btn-outline">Choose Unlimited</a>
+        </article>
+      </div>
+      <p class="fine">Off-peak is weekdays before 5 PM. Peak hours use your included hours first, then member rates.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Compare</span>
+        <h2>What's in each plan</h2>
+        <p>Every plan side by side, so you know exactly what you get.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col">Casual</th><th scope="col" class="hl">Regular</th><th scope="col">Unlimited</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Court time</th><td>4 hrs / month</td><td class="hl">10 hrs / month</td><td>Unlimited off-peak</td></tr>
+            <tr><th scope="row">Advance booking</th><td>3 days</td><td class="hl">7 days</td><td>14 days</td></tr>
+            <tr><th scope="row">Sports</th><td>Either one</td><td class="hl">Both</td><td>Both</td></tr>
+            <tr><th scope="row">Guest passes</th><td><span class="no" role="img" aria-label="Not included">—</span></td><td class="hl">2 / month</td><td>4 / month</td></tr>
+            <tr><th scope="row">Coaching discount</th><td><span class="no" role="img" aria-label="Not included">—</span></td><td class="hl">10%</td><td>20%</td></tr>
+            <tr><th scope="row">Locker</th><td><span class="no" role="img" aria-label="Not included">—</span></td><td class="hl"><span class="no" role="img" aria-label="Not included">—</span></td><td><span class="yes" role="img" aria-label="Included"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+            <tr><th scope="row">Priority peak booking</th><td><span class="no" role="img" aria-label="Not included">—</span></td><td class="hl"><span class="no" role="img" aria-label="Not included">—</span></td><td><span class="yes" role="img" aria-label="Included"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></td></tr>
+            <tr><th scope="row">Pause membership</th><td><span class="no" role="img" aria-label="Not included">—</span></td><td class="hl">1 month / year</td><td>2 months / year</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap perks">
+      <figure class="media perks-img" data-label="member-perks.jpg · 4:5"><img src="images/member-perks.jpg" alt="Members enjoying a doubles game after hours" loading="lazy" onerror="this.remove()"></figure>
+      <div>
+        <div class="section-head">
+          <span class="kicker">Member extras</span>
+          <h2>More than just court time</h2>
+          <p>Membership opens the door to the community, the coaching and a faster way in.</p>
+        </div>
+        <ul class="perk-list">
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM17 6h3v2a3 3 0 01-3 3M7 6H4v2a3 3 0 003 3"/></svg></span><div><h3>Member-only events</h3><p>Monthly social tournaments, mixers and ladder leagues.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c1.4-3.8 4.2-5.6 7-5.6s5.6 1.8 7 5.6"/></svg></span><div><h3>Coaching at a discount</h3><p>Group classes and one-to-one sessions at reduced rates.</p></div></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span><div><h3>Fast check-in</h3><p>Show your member card at the front desk and walk straight in.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Getting started</span>
+        <h2>Join in four steps</h2>
+        <p>From sign-up to your first booking in just a few minutes.</p>
+      </div>
+      <ol class="join-steps">
+        <li><div class="step-photo"><figure class="media step-img" data-label="step-1.jpg · 4:3"><img src="images/step-1.jpg" alt="Browsing plans on a phone" loading="lazy" onerror="this.remove()"></figure><span class="n">1</span></div><h3>Pick a plan</h3><p>Choose the one that fits how often you play.</p></li>
+        <li><div class="step-photo"><figure class="media step-img" data-label="step-2.jpg · 4:3"><img src="images/step-2.jpg" alt="Signing up at the front desk" loading="lazy" onerror="this.remove()"></figure><span class="n">2</span></div><h3>Create your account</h3><p>Sign up with your phone number or email.</p></li>
+        <li><div class="step-photo"><figure class="media step-img" data-label="step-3.jpg · 4:3"><img src="images/step-3.jpg" alt="Paying with a UPI app" loading="lazy" onerror="this.remove()"></figure><span class="n">3</span></div><h3>Pay securely</h3><p>Pay online by UPI or card, or at the front desk.</p></li>
+        <li><div class="step-photo"><figure class="media step-img" data-label="step-4.jpg · 4:3"><img src="images/step-4.jpg" alt="Stepping onto the court" loading="lazy" onerror="this.remove()"></figure><span class="n">4</span></div><h3>Start booking</h3><p>Your hours and member rates are live straight away.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section alt stories-sec">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Member stories</span>
+        <h2>Why they joined</h2>
+        <p>Real words from the players who make Rally Point their second home.</p>
+      </div>
+      <div class="stories">
+        <figure class="story">
+          <figure class="media story-img" data-label="member-1.jpg · 4:5"><img src="images/member-1.jpg" alt="Rohit M." loading="lazy" onerror="this.remove()"></figure>
+          <figcaption>
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
+            <blockquote>“The Regular plan paid for itself in two weeks. I play three evenings a week now.”</blockquote>
+            <strong>Rohit M.</strong><span>Regular member</span>
+          </figcaption>
+        </figure>
+        <figure class="story">
+          <figure class="media story-img" data-label="member-2.jpg · 4:5"><img src="images/member-2.jpg" alt="Priya S." loading="lazy" onerror="this.remove()"></figure>
+          <figcaption>
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
+            <blockquote>“Unlimited off-peak means I train before work every morning. Best decision”</blockquote>
+            <strong>Priya S.</strong><span>Unlimited member</span>
+          </figcaption>
+        </figure>
+        <figure class="story">
+          <figure class="media story-img" data-label="member-3.jpg · 4:5"><img src="images/member-3.jpg" alt="Anand K." loading="lazy" onerror="this.remove()"></figure>
+          <figcaption>
+            <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
+            <blockquote>“One game a week with friends and the Casual plan keeps it easy and affordable.”</blockquote>
+            <strong>Anand K.</strong><span>Casual member</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-sec">
+    <div class="wrap join-cta">
+    <figure class="media join-img" data-label="join-cta.jpg · 1:1"><img src="images/join-cta.jpg" alt="Friends celebrating a match win" loading="lazy" onerror="this.remove()"></figure>
+    <div class="join-text">
+      <div>
+        <span class="kicker light">Try before you join</span>
+        <h2>Book a trial hour.</h2>
+        <p>Not ready to commit? Play one hour at member rates and we'll credit it if you sign up the same week.</p>
+        <div class="cta-actions">
+          <a href="../courts/courts.html" class="btn btn-secondary">Book a trial hour</a>
+          <a href="../contact/contact.html" class="btn btn-outline-light">Talk to us</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../home/index.html" class="brand" aria-label="Rally Point home">
+        <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="var(--logo-bg)"/>
+          <g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none">
+            <path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/>
+          </g>
+          <circle cx="23" cy="43" r="7.5" fill="var(--logo-ball)"/>
+        </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Rally<em>Point</em></span>
+          <span class="brand-sub">Badminton &amp; Table Tennis Courts</span>
+        </span>
+      </a>
+        <p class="footer-desc">Indoor badminton courts and table tennis tables in Hyderabad. Check live availability, book by the hour, or play on a membership.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.9" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.2-4.1A8 8 0 1 1 8.2 19z"/><path d="M9 9.2c.2 2.2 2.6 4.6 5.8 5.6l1.2-1.4-1.8-1-.9.6c-.8-.4-1.6-1.2-2-2l.6-.9-1-1.8z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="../home/index.html">Home</a></li>
+          <li><a href="../home2/home-2.html">Home 2 – Modern</a></li>
+          <li><a href="../about/about.html">About Us</a></li>
+          <li><a href="../membership/membership.html">Membership Plans</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+          <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Courts</h4>
+        <ul>
+          <li><a href="../courts/courts.html">All courts</a></li>
+          <li><a href="../courts/courts.html#badminton">Badminton</a></li>
+          <li><a href="../courts/courts.html#table-tennis">Table tennis</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Visit us</h4>
+        <ul>
+          <li class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+            <span>Road No. 36, Jubilee Hills,<br>Hyderabad, Telangana</span>
+          </li>
+          <li class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Daily, 6 AM – 11 PM</span>
+          </li>
+          <li class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+            <a href="tel:+919000000000">+91 90000 00000</a>
+          </li>
+          <li class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <a href="mailto:play@rallypoint.in">play@rallypoint.in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Rally Point. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="../legal/terms.html">Terms</a>
+        <a href="../legal/privacy.html">Privacy</a>
+        <a href="../legal/404.html">404</a>
+        <a href="../legal/coming-soon.html">Coming soon</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../home/script.js"></script>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.p-btn');
+  var disc = {1:0, 3:.10, 12:.20};
+  function fmt(n){ return '\u20B9' + Math.round(n).toLocaleString('en-IN'); }
+  function setPeriod(m){
+    btns.forEach(function(b){ var on = +b.dataset.months === m; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', on); });
+    document.querySelectorAll('.plan').forEach(function(p){
+      var base = +p.querySelector('[data-monthly]').dataset.monthly;
+      var per = base * (1 - disc[m]);
+      p.querySelector('[data-monthly]').textContent = fmt(per);
+      var bill = p.querySelector('[data-bill]');
+      bill.textContent = m === 1 ? 'Billed monthly' : fmt(per * m) + ' billed ' + (m === 3 ? 'every 3 months' : 'yearly');
+    });
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ setPeriod(+b.dataset.months); }); });
+})();
+</script>
+</body>
+</html>
