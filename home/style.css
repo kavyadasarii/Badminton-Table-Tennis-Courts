@@ -26,6 +26,10 @@
   --logo-ball: #FF6A1A;
   --logo-text: #0F1D16;
 
+  --btn-bg: #0B6B45;
+  --btn-bg-hover: #095538;
+  --btn-fg: #FFFFFF;
+
   --radius: 8px;
   --shadow: 0 18px 44px rgba(10,42,29,.14);
 }
@@ -46,6 +50,10 @@ html[data-theme="dark"]{
   --text-soft: #A3B5AA;
 
   --court: #050C09;
+  --btn-bg: #FF7A33;
+  --btn-bg-hover: #FF9459;
+  --btn-fg: #1B0F05;
+
   --logo-bg: #0F8A5A;
   --logo-text: #EAF3EC;
   --shadow: 0 18px 44px rgba(0,0,0,.55);
@@ -90,17 +98,23 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 .btn svg{ width: 17px; height: 17px; flex: none; }
 .btn-sm{ height: 40px; padding: 0 18px; font-size: 17px; }
 
-.btn-primary{ background: var(--primary); color: var(--primary-contrast); }
-.btn-primary:hover{ background: var(--primary-hover); }
+/* One shared style for every filled button (primary, secondary, login):
+   dark green in light mode, orange in dark mode. */
+.btn-primary, .btn-secondary{
+  background: var(--btn-bg); color: var(--btn-fg);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.28); /* keeps it visible on dark green bands */
+}
+.btn-primary:hover, .btn-secondary:hover{ background: var(--btn-bg-hover); }
+.btn-primary:disabled, .btn-secondary:disabled{ opacity: .55; cursor: not-allowed; }
 
-.btn-secondary{ background: var(--secondary); color: var(--secondary-contrast); }
-.btn-secondary:hover{ background: var(--secondary-hover); }
-
-.btn-outline{ background: transparent; color: var(--text); border-color: #8FA399; }
-.btn-outline:hover{ border-color: var(--primary); color: var(--primary); }
-
-.btn-outline-light{ background: transparent; color: #fff; border-color: rgba(255,255,255,.7); }
-.btn-outline-light:hover{ background: rgba(255,255,255,.14); border-color: #fff; }
+/* ONE secondary-button style used everywhere (.btn-outline and .btn-outline-light
+   are identical), on light pages, photo heroes and dark bands alike. */
+.btn-outline, .btn-outline-light{
+  background: var(--surface); color: var(--text); border-color: #8FA399;
+}
+.btn-outline:hover, .btn-outline-light:hover{
+  background: var(--surface); border-color: var(--btn-bg); color: var(--btn-bg);
+}
 
 .tab.is-active, .p-btn.is-active{ background: var(--primary); color: var(--primary-contrast); }
 

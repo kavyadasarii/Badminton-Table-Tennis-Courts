@@ -12,7 +12,37 @@
 <link rel="stylesheet" href="auth.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none'%3E%3Crect width='64' height='64' rx='14' fill='%230B6B45'/%3E%3Cg stroke='%23fff' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M27 39L43 15M29 42L50.7 22.7M30 45L52 32M43 15Q54 22 52 32'/%3E%3C/g%3E%3Ccircle cx='23' cy='43' r='7.5' fill='%23FF6A1A'/%3E%3C/svg%3E">
 </head>
-<body class="auth-page">
+<body class="auth-page" data-bg="paddles">
+
+<div class="auth-bg" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span>
+
+  <div class="bgv bgv-court">
+  <svg class="court" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" fill="none">
+    <rect pathLength="1" x="120" y="110" width="960" height="480"/>
+    <path pathLength="1" d="M120 170H1080M120 530H1080"/>
+    <path pathLength="1" d="M600 110V590"/>
+    <path pathLength="1" d="M330 170V530M870 170V530"/>
+    <path pathLength="1" d="M330 350H870"/>
+  </svg>
+
+  <span class="sh s1"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 27L28 7M16 30L35 15M17 33L37 23M28 7Q36 12 35 15"/><circle cx="12" cy="30" r="6" fill="currentColor" stroke="none"/></svg></span>
+  <span class="sh s2"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 27L28 7M16 30L35 15M17 33L37 23M28 7Q36 12 35 15"/><circle cx="12" cy="30" r="6" fill="currentColor" stroke="none"/></svg></span>
+  <span class="sh s3"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M14 27L28 7M16 30L35 15M17 33L37 23M28 7Q36 12 35 15"/><circle cx="12" cy="30" r="6" fill="currentColor" stroke="none"/></svg></span>
+
+  <div class="rally"><span class="travel"><span class="bounce"></span></span><span class="shadow"></span></div>
+  </div>
+
+  <div class="bgv bgv-paddles">
+    <span class="pad l"><svg viewBox="0 0 60 92" fill="none"><circle class="ph" cx="30" cy="30" r="27"/><rect class="pg" x="24.5" y="55" width="11" height="34" rx="4.5"/></svg></span>
+    <span class="pad r"><svg viewBox="0 0 60 92" fill="none"><circle class="ph" cx="30" cy="30" r="27"/><rect class="pg" x="24.5" y="55" width="11" height="34" rx="4.5"/></svg></span>
+    <div class="pball"><span class="ptravel"><span class="parc"></span></span></div>
+  </div>
+
+  <div class="bgv bgv-bubbles"><i style="--l:6%;--s:26px;--d:19s;--t:-2s"></i><i style="--l:14%;--s:14px;--d:24s;--t:-11s"></i><i style="--l:23%;--s:38px;--d:28s;--t:-6s"></i><i style="--l:31%;--s:18px;--d:21s;--t:-15s"></i><i style="--l:40%;--s:30px;--d:26s;--t:-3s"></i><i style="--l:49%;--s:12px;--d:18s;--t:-9s"></i><i style="--l:57%;--s:34px;--d:30s;--t:-17s"></i><i style="--l:66%;--s:20px;--d:22s;--t:-5s"></i><i style="--l:74%;--s:42px;--d:27s;--t:-13s"></i><i style="--l:81%;--s:16px;--d:20s;--t:-8s"></i><i style="--l:88%;--s:28px;--d:25s;--t:-1s"></i><i style="--l:94%;--s:22px;--d:23s;--t:-12s"></i><i style="--l:10%;--s:44px;--d:32s;--t:-20s"></i><i style="--l:62%;--s:10px;--d:17s;--t:-4s"></i></div>
+
+  <div class="bgv bgv-dots"><span class="dg d1"></span><span class="dg d2"></span></div>
+</div>
 
 <div class="top-actions">
   <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
@@ -42,6 +72,7 @@
     </a>
     <div class="auth-head">
       <h1 id="auth-title">Welcome back</h1>
+      <p>Log in to book your courts and keep your game going.</p>
     </div>
     <form class="auth-form" id="auth-form" data-mode="login" data-next="../dashboard/dashboard.html" novalidate>
       <div class="field">

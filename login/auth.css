@@ -142,3 +142,70 @@ html[data-theme="dark"] .switch a:hover{ color: var(--secondary); }
   body.auth-page{ height: auto; min-height: 100dvh; overflow: auto; }
 }
 @media (max-width: 360px){ .row-between{ flex-wrap: wrap; } }
+
+/* ---------- Animated background: pick one with <body data-bg="paddles | bubbles | dots | court"> ---------- */
+.bgv{ display: none; position: absolute; inset: 0; }
+body[data-bg="paddles"] .bgv-paddles, body[data-bg="bubbles"] .bgv-bubbles, body[data-bg="dots"] .bgv-dots, body[data-bg="court"] .bgv-court{ display: block; }
+.auth-main{ position: relative; z-index: 1; overflow-y: auto; align-items: safe center; }
+.auth-bg{ position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; opacity: .55; }
+.blob{ position: absolute; border-radius: 50%; filter: blur(80px); opacity: .35; }
+.blob.b1{ width: 340px; height: 340px; top: -90px; inset-inline-start: 4%; background: color-mix(in srgb, var(--primary) 22%, transparent); animation: drift 18s ease-in-out infinite alternate; }
+.blob.b2{ width: 400px; height: 400px; bottom: -120px; inset-inline-end: 6%; background: color-mix(in srgb, var(--secondary) 24%, transparent); animation: drift 22s ease-in-out infinite alternate-reverse; }
+
+.court{ position: absolute; inset: 0; width: 100%; height: 100%; }
+.court rect, .court path{ stroke: var(--primary); stroke-width: 2; stroke-linecap: round; opacity: .22; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 16s ease-in-out infinite; }
+.court path:nth-of-type(2){ animation-delay: .6s; }
+.court path:nth-of-type(3){ animation-delay: 1.2s; }
+.court path:nth-of-type(4){ animation-delay: 1.8s; }
+
+.sh{ position: absolute; width: 34px; height: 34px; color: var(--primary); opacity: .3; animation: floatup 20s linear infinite; }
+.sh svg{ width: 100%; height: 100%; display: block; }
+.sh.s1{ left: 12%; bottom: -50px; }
+.sh.s2{ left: 48%; bottom: -50px; width: 26px; height: 26px; animation-duration: 26s; animation-delay: -9s; color: var(--secondary); }
+.sh.s3{ left: 82%; bottom: -50px; animation-duration: 23s; animation-delay: -15s; }
+
+.rally{ position: absolute; inset-inline: 0; bottom: 7%; height: 150px; }
+.rally .travel{ position: absolute; bottom: 0; left: 0; width: 18px; height: 18px; animation: cross 5s linear infinite alternate; }
+.rally .bounce{ display: block; width: 100%; height: 100%; border-radius: 50%; background: var(--secondary); animation: hop 1.25s cubic-bezier(.3,.6,.4,1) infinite; }
+.rally .shadow{ position: absolute; bottom: -6px; left: 0; width: 18px; height: 5px; border-radius: 50%; background: var(--text); opacity: .12; animation: cross 5s linear infinite alternate; }
+
+@keyframes draw{ 0%{ stroke-dashoffset: 1; } 35%,70%{ stroke-dashoffset: 0; } 100%{ stroke-dashoffset: -1; } }
+@keyframes floatup{ from{ transform: translate(0,0) rotate(0); } to{ transform: translate(80px,-115vh) rotate(200deg); } }
+@keyframes cross{ from{ transform: translateX(6vw); } to{ transform: translateX(calc(94vw - 18px)); } }
+@keyframes hop{ 0%{ transform: translateY(0); animation-timing-function: cubic-bezier(.2,.7,.4,1); } 50%{ transform: translateY(-120px); animation-timing-function: cubic-bezier(.6,0,.8,.4); } 100%{ transform: translateY(0); } }
+@keyframes drift{ from{ transform: translate(0,0) scale(1); } to{ transform: translate(40px,30px) scale(1.1); } }
+
+@media (max-width: 640px){ .auth-main{ align-items: flex-start; } .rally{ height: 110px; } @keyframes hop{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-80px); } } }
+@media (prefers-reduced-motion: reduce){
+  .blob, .court *, .sh, .rally *{ animation: none !important; }
+  .court rect, .court path{ stroke-dashoffset: 0; }
+}
+
+/* --- paddles: table-tennis rally --- */
+.pad{ position: absolute; bottom: 8%; width: 58px; transform-origin: 50% 92%; animation: swing 6s ease-in-out infinite; }
+.pad svg{ display: block; width: 100%; height: auto; }
+.pad .ph{ fill: color-mix(in srgb, var(--primary) 55%, transparent); stroke: var(--primary); stroke-width: 2.5; }
+.pad .pg{ fill: color-mix(in srgb, var(--secondary) 60%, transparent); }
+.pad.l{ inset-inline-start: 4%; }
+.pad.r{ inset-inline-end: 4%; scale: -1 1; animation-delay: -3s; }
+.pball{ position: absolute; inset-inline: 0; bottom: calc(8% + 60px); height: 0; }
+.ptravel{ position: absolute; bottom: 0; left: 0; width: 16px; height: 16px; animation: pcross 3s linear infinite alternate; }
+.parc{ display: block; width: 100%; height: 100%; border-radius: 50%; background: var(--secondary); animation: parc 3s infinite; }
+@keyframes pcross{ from{ transform: translateX(calc(4vw + 70px)); } to{ transform: translateX(calc(96vw - 86px)); } }
+@keyframes parc{ 0%,100%{ transform: translateY(0); animation-timing-function: cubic-bezier(.2,.7,.4,1); } 50%{ transform: translateY(-190px); animation-timing-function: cubic-bezier(.6,0,.8,.3); } }
+@keyframes swing{ 0%{ rotate: -35deg; } 6%{ rotate: 18deg; } 20%{ rotate: 0deg; } 85%{ rotate: 0deg; } 100%{ rotate: -35deg; } }
+
+/* --- bubbles: rising balls --- */
+.bgv-bubbles i{ position: absolute; bottom: -60px; left: var(--l); width: var(--s); height: var(--s); border-radius: 50%; border: 2px solid color-mix(in srgb, var(--primary) 45%, transparent); background: color-mix(in srgb, var(--primary) 8%, transparent); animation: rise var(--d) linear infinite; animation-delay: var(--t); }
+.bgv-bubbles i:nth-child(3n){ border-color: color-mix(in srgb, var(--secondary) 50%, transparent); background: color-mix(in srgb, var(--secondary) 10%, transparent); }
+@keyframes rise{ 0%{ transform: translate(0,0) scale(.8); } 50%{ transform: translate(28px,-55vh) scale(1); } 100%{ transform: translate(-18px,-115vh) scale(1.1); } }
+
+/* --- dots: glowing grid --- */
+.dg{ position: absolute; inset: 0; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; -webkit-mask-size: 640px 640px; mask-size: 640px 640px; -webkit-mask-image: radial-gradient(circle closest-side, #000, transparent); mask-image: radial-gradient(circle closest-side, #000, transparent); }
+.dg.d1{ background-image: radial-gradient(color-mix(in srgb, var(--primary) 70%, transparent) 1.8px, transparent 2px); background-size: 30px 30px; animation: roam1 16s ease-in-out infinite alternate; }
+.dg.d2{ background-image: radial-gradient(color-mix(in srgb, var(--secondary) 75%, transparent) 1.8px, transparent 2px); background-size: 30px 30px; background-position: 15px 15px; animation: roam2 19s ease-in-out infinite alternate; }
+@keyframes roam1{ from{ -webkit-mask-position: 0% 10%; mask-position: 0% 10%; } to{ -webkit-mask-position: 100% 90%; mask-position: 100% 90%; } }
+@keyframes roam2{ from{ -webkit-mask-position: 100% 15%; mask-position: 100% 15%; } to{ -webkit-mask-position: 0% 95%; mask-position: 0% 95%; } }
+
+@media (max-width: 640px){ .pad{ width: 44px; } .pball{ bottom: calc(8% + 46px); } @keyframes parc{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-120px); } } @keyframes pcross{ from{ transform: translateX(60px); } to{ transform: translateX(calc(100vw - 76px)); } } }
+@media (prefers-reduced-motion: reduce){ .pad, .ptravel, .parc, .bgv-bubbles i, .dg{ animation: none !important; } }

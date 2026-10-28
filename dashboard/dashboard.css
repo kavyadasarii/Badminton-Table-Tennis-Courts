@@ -145,3 +145,40 @@ table.tbl{ width: 100%; min-width: 620px; border-collapse: collapse; }
   .top-title h1{ font-size: 22px; }
   .days{ gap: 4px; }
 }
+
+/* Account dropdown */
+.me-wrap{ position: relative; }
+.me .chev{ width: 18px; height: 18px; flex: none; color: var(--text-soft); transition: transform .2s; }
+.me-wrap.open .chev{ transform: rotate(180deg); }
+.me-wrap.open .me{ border-color: var(--primary); }
+.me-menu{ position: absolute; top: calc(100% + 10px); inset-inline-end: 0; z-index: 60; min-width: 250px; padding: 8px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); }
+.me-menu[hidden]{ display: none; }
+.mm-head{ display: flex; align-items: center; gap: 12px; padding: 10px 12px 14px; margin-bottom: 6px; border-bottom: 1px solid var(--border); }
+.mm-head b{ display: block; color: var(--primary); }
+.mm-head small{ color: var(--text-soft); font-size: 13.5px; }
+.me-menu > button, .me-menu > a{ display: flex; align-items: center; gap: 12px; width: 100%; padding: 11px 12px; font: inherit; font-weight: 600; text-align: start; color: var(--text); background: transparent; border: 0; border-radius: 10px; cursor: pointer; text-decoration: none; }
+.me-menu > button:hover, .me-menu > a:hover{ background: color-mix(in srgb, var(--primary) 10%, transparent); }
+.me-menu svg{ width: 20px; height: 20px; flex: none; }
+.me-menu > .mm-out{ margin-top: 6px; color: #D93025; }
+.mn{ margin-inline-start: auto; min-width: 22px; padding: 1px 7px; border-radius: 999px; background: var(--secondary); color: var(--secondary-contrast); font-size: 12px; font-weight: 700; text-align: center; }
+.mn:empty{ display: none; }
+
+/* Mobile: everything fits in one header row; the title wraps to two lines if needed */
+@media (max-width: 640px){
+  .top{ flex-wrap: nowrap; gap: 6px; padding: 10px 10px; }
+  .top-title{ flex: 1 1 0; min-width: 0; }
+  .top-title h1{ font-size: 16px; line-height: 1.05; white-space: normal; overflow-wrap: anywhere; }
+  .top-actions{ flex: none; gap: 5px; }
+  .top .icon-btn{ width: 34px; height: 34px; }
+  .top .icon-btn svg{ width: 18px; height: 18px; }
+  .top #dir-toggle{ padding: 6px 8px; min-height: 34px; font-size: 13px; }
+  .me, [dir="rtl"] .me{ padding: 2px; }
+  .me .av{ width: 30px; height: 30px; font-size: 14px; }
+  .me .chev{ display: none; }
+  .me-menu{ min-width: 230px; max-width: calc(100vw - 24px); }
+}
+@media (max-width: 360px){
+  .top-title h1{ font-size: 14px; }
+  .top-actions{ gap: 4px; }
+  .top .icon-btn{ width: 32px; height: 32px; }
+}

@@ -20,8 +20,8 @@ function fd(x){ return x.toLocaleDateString('en-IN',{weekday:'short',day:'numeri
 function ft(h){ return ((h%12)||12)+':00 '+(h<12?'AM':'PM'); }
 var COURTS = {'Badminton':4,'Table Tennis':3}, RATE = {'Badminton':[300,400],'Table Tennis':[180,250]};
 var S = {
-  view:'overview', sport:'Badminton', court:1, day:0, slot:null, usePlan:true, tab:'Upcoming', hours:7, total:10, paused:false, name:'Kavya Reddy',
-  email:'kavya@example.com', phone:'+91 90000 00000', pref:'Badminton', level:'Intermediate',
+  view:'overview', sport:'Badminton', court:1, day:0, slot:null, usePlan:true, tab:'Upcoming', hours:7, total:10, paused:false, name:'Arjun Mehta',
+  email:'arjun@example.com', phone:'+91 90000 00000', pref:'Badminton', level:'Intermediate',
   bookings:[
     {id:1,sport:'Badminton',court:2,d:1,h:19,amt:0,st:'Upcoming',plan:1},
     {id:2,sport:'Table Tennis',court:1,d:3,h:6,amt:180,st:'Upcoming',plan:0},
@@ -102,13 +102,17 @@ profile:function(){
 function render(){
   $('#nav').innerHTML = NAV.map(function(n){ return '<button data-a="go" data-v="'+n[0]+'" class="'+(S.view===n[0]?'on':'')+'"'+(S.view===n[0]?' aria-current="page"':'')+'>'+ic(n[0])+'<span>'+n[1]+'</span>'+(n[0]==='notifications'&&unread()?'<span class="n">'+unread()+'</span>':'')+'</button>'; }).join('');
   $('#bell-n').textContent = unread()||'';
-  $('#av').textContent = S.name[0]; $('#me-name').textContent = S.name.split(' ')[0];
+  $('#av').textContent = S.name[0]; $('#av2').textContent = S.name[0]; $('#me-name').textContent = S.name.split(' ')[0]; $('#mm-name').textContent = S.name;
+  $('#menu-n').textContent = unread()||'';
   $('#view').innerHTML = V[S.view]();
 }
-function go(v){ S.view=v; render(); $('#view').scrollTop=0; closeSide(); }
+function setMenu(open){ $('#me-menu').hidden=!open; $('#me-btn').setAttribute('aria-expanded',open); $('#me-wrap').classList.toggle('open',open); }
+function go(v){ setMenu(false); S.view=v; render(); $('#view').scrollTop=0; closeSide(); }
 function closeSide(){ $('#side').classList.remove('open'); $('#scrim').classList.remove('open'); }
 
 document.addEventListener('click',function(e){
+  if(!e.target.closest('#me-wrap')) setMenu(false);
+  if(e.target.closest('[data-a="menu"]')){ setMenu($('#me-menu').hidden); return; }
   var t=e.target.closest('[data-a]'); if(!t||t.tagName==='SELECT'||t.type==='checkbox') return;
   if(t.tagName==='A') e.preventDefault();
   var a=t.dataset.a, v=t.dataset.v, x;
@@ -139,6 +143,7 @@ document.addEventListener('submit',function(e){
   ['name','email','phone','pref','level'].forEach(function(k){ S[k]=f.get(k); });
   toast('Profile saved'); render();
 });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ setMenu(false); $('#me-btn').focus(); } });
 $('#side-toggle').addEventListener('click',function(){ $('#side').classList.add('open'); $('#scrim').classList.add('open'); });
 $('#scrim').addEventListener('click',closeSide);
 $('#today').textContent = new Date().toLocaleDateString('en-IN',{weekday:'long',day:'numeric',month:'long',year:'numeric'});

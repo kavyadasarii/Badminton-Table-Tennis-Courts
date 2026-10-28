@@ -224,3 +224,16 @@ html[dir="rtl"] .plan .badge{ transform: translateX(50%); }
 .cta-note a{ font-weight: 600; color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 .cta-note a:hover{ color: var(--secondary); }
 @media (max-width: 640px){ .cta-actions .btn{ width: 100%; } }
+
+/* FAQ left column: quick contact list */
+.faq-help{ display: flex; flex-direction: column; gap: 12px; margin: 26px 0 0; padding: 0; list-style: none; }
+.faq-help li{ display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.faq-help li:hover{ border-color: var(--primary); transform: translateY(-2px); box-shadow: var(--shadow); }
+.fh-ic{ display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 12px; background: color-mix(in srgb, var(--primary) 12%, transparent); color: var(--primary); transition: background .2s ease, color .2s ease; }
+.fh-ic svg{ width: 21px; height: 21px; }
+.faq-help li:hover .fh-ic{ background: var(--primary); color: var(--primary-contrast); }
+.faq-help li > span:last-child{ display: flex; flex-direction: column; min-width: 0; }
+.faq-help small{ font-size: 13px; color: var(--text-soft); }
+.faq-help a, .faq-help b{ font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.faq-help a:hover{ color: var(--primary); }
+.faq-grid .faq-btn{ margin-top: 22px; }

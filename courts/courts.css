@@ -181,3 +181,44 @@ html[data-theme="dark"] .text-link:hover{ color: var(--secondary); }
 .help-tile strong{ font-size: 18px; }
 .help-band .btn{ margin-top: 24px; }
 @media (max-width: 640px){ .help-band{ padding: 44px 0 40px; } }
+
+/* ---------- Hover colours ---------- */
+.court, .fac, .help-tile, .rates tbody tr, .chips li, .tab, .faq summary{ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease, color .25s ease; }
+
+/* court cards */
+.court:hover{ border-color: var(--primary); background: color-mix(in srgb, var(--primary) 6%, var(--surface)); }
+.court:hover .court-top h3{ color: var(--primary); }
+.court:hover .court-price{ color: var(--secondary-text); }
+.court:hover .chips li{ background: color-mix(in srgb, var(--primary) 10%, var(--bg)); border-color: color-mix(in srgb, var(--primary) 35%, var(--border)); color: var(--text); }
+html[data-theme="dark"] .court:hover .court-price{ color: var(--secondary); }
+
+/* filter tabs */
+.tab:not(.is-active):hover{ background: color-mix(in srgb, var(--primary) 14%, transparent); color: var(--primary); }
+
+/* facility cards: tinted background as well as the existing colour swap */
+.fac:hover{ background: color-mix(in srgb, var(--primary) 6%, var(--surface)); }
+.fac:hover h3{ color: var(--primary); }
+
+/* rates table rows */
+.rates tbody tr:hover th, .rates tbody tr:hover td{ background: color-mix(in srgb, var(--primary) 9%, transparent); }
+.rates tbody tr:hover td{ color: var(--secondary-text); }
+html[data-theme="dark"] .rates tbody tr:hover td{ color: var(--secondary); }
+
+/* FAQ rows */
+.faq summary:hover{ color: var(--primary); }
+.faq summary:hover::after{ color: var(--primary); }
+
+/* help band tiles: orange glow */
+.help-tile:hover{ background: color-mix(in srgb, var(--secondary) 28%, rgba(255,255,255,.08)); border-color: var(--secondary); }
+.help-tile:hover svg{ color: #fff; }
+
+/* finder fields */
+.finder select:hover, .finder input:hover{ border-color: var(--primary); }
+
+/* ---------- Chips: always one line, scaled to the card width ---------- */
+.court{ container-type: inline-size; }
+.court-body{ padding-inline: clamp(16px, 5.5cqi, 24px); }
+.chips{ flex-wrap: nowrap; gap: clamp(4px, 1.6cqi, 8px); }
+.chips li{ flex: 0 1 auto; min-width: 0; white-space: nowrap; font-size: clamp(11px, 3.1cqi, 13.5px); padding: 5px clamp(7px, 2.4cqi, 12px); }
+/* very narrow cards: let chips wrap rather than overflow */
+@container (max-width: 320px){ .chips{ flex-wrap: wrap; } .chips li{ font-size: 12.5px; } }

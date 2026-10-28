@@ -19,7 +19,7 @@
       <span class="brand-mark" aria-hidden="true">
         <svg viewBox="0 0 64 64" fill="none"><rect width="64" height="64" rx="14" fill="var(--logo-bg)"/><g stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"><path d="M27 39L43 15"/><path d="M29 42L50.7 22.7"/><path d="M30 45L52 32"/><path d="M43 15Q54 22 52 32"/></g><circle cx="23" cy="43" r="7.5" fill="var(--logo-ball)"/></svg>
       </span>
-      <span class="brand-text"><span class="logo-word">Rally<em>Point</em></span><span class="brand-sub">Player Dashboard</span></span>
+      <span class="brand-text"><span class="logo-word">Rally<em>Point</em></span><span class="brand-sub">Badminton &amp; Table Tennis Courts</span></span>
     </a>
     <nav class="snav" id="nav"></nav>
     <div class="side-foot">
@@ -40,7 +40,15 @@
           <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
         </button>
         <button class="icon-btn bell" data-a="go" data-v="notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15zM10 20a2 2 0 004 0"/></svg><span class="dot" id="bell-n"></span></button>
-        <button class="me" data-a="go" data-v="profile" aria-label="My profile"><span class="av" id="av">K</span><span class="me-name" id="me-name">Kavya</span></button>
+        <div class="me-wrap" id="me-wrap">
+          <button class="me" id="me-btn" data-a="menu" aria-haspopup="menu" aria-expanded="false" aria-controls="me-menu" aria-label="Account menu"><span class="av" id="av">A</span><span class="me-name" id="me-name">Arjun</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="me-menu" id="me-menu" role="menu" hidden>
+            <div class="mm-head"><span class="av" id="av2">A</span><div><b id="mm-name">Arjun Mehta</b><small>Player Account</small></div></div>
+            <button role="menuitem" data-a="go" data-v="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.4a3.6 3.6 0 100 7.2 3.6 3.6 0 000-7.2zM5 20c1.4-3.8 4.2-5.6 7-5.6s5.6 1.8 7 5.6"/></svg><span>My Profile</span></button>
+            <button role="menuitem" data-a="go" data-v="notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0112 0v5l1.5 2h-15zM10 20a2 2 0 004 0"/></svg><span>Notifications</span><span class="mn" id="menu-n"></span></button>
+            <a role="menuitem" class="mm-out" href="../login/login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4H5v16h4M16 8l4 4-4 4M20 12H9"/></svg><span>Logout</span></a>
+          </div>
+        </div>
       </div>
     </header>
     <main class="view" id="view" tabindex="-1"></main>
